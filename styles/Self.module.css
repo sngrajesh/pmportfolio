@@ -1,0 +1,108 @@
+.self_main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100vh - 64px);
+}
+
+.self_content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+  padding: 3rem;
+  z-index: 1;
+}
+
+.self_content h1,
+.self_content h2 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.self_content h1 {
+  font-size: 4.5rem;
+  font-weight: 300;
+}
+
+.self_content h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.self_content p {
+  font-size: 1.2rem;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+  color: rgba(255, 252, 252, 0.7);
+}
+
+.self_image {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.self_image img {
+  width: fit-content;
+  width: -moz-fit-content;
+  height: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.social_links {
+  display: flex;
+  gap: 5px;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.social_links a {
+  color: rgba(255, 252, 252, 0.7);
+  text-decoration: none;
+}
+
+.social_links a svg {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+.social_links a:hover {
+  color: #fff;
+}
+
+@media (max-width: 920px) {
+  .self_content {
+    padding: 2rem;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    height: 100%;
+    padding: 70px 0 2rem 2rem;
+    gap: 10px;
+  }
+
+  .self_content h1 {
+    font-size: 3rem;
+  }
+  .self_content h2 {
+    font-size: 1.3rem;
+  }
+  .self_content p {
+    font-size: 0.9rem;
+  }
+  .self_image {
+    width: 100%;
+    left: 40%;
+  }
+}
