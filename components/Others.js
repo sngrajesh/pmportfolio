@@ -45,7 +45,6 @@ const Others = () => {
           font-size: 1.2rem;
           font-weight: 100;
           letter-spacing: 0.5px;
-          color: rgba(255, 252, 252, 0.7);
         }
 
         @media (max-width: 920px) {

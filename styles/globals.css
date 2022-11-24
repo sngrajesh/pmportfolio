@@ -1,5 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@500&display=swap");
 
+:root {
+  --color-primary-bg: #ffffff;
+  --color-secondary-bg: #afafafef;
+  --color-tertiary-bg: #ececec91;
+  --color-primary-text: #000000;
+  --color-secondary-text: #242424;
+  --color-tertiary-text: #00000020;
+  --color-shadow: #ffffff58;
+  --invert: 1;
+}
+
+[data-theme="dark"] {
+  --color-primary-bg: #000;
+  --color-secondary-bg: #242424;
+  --color-tertiary-bg: #191919bf;
+  --color-primary-text: #ffffff;
+  --color-secondary-text: #fffcfcb3;
+  --color-tertiary-text: #ffffff20;
+  --color-shadow: #0000001a;
+  --invert: 0;
+}
+
 html,
 body {
   padding: 0;
@@ -7,27 +29,37 @@ body {
   font-family: "Nunito Sans", sans-serif, -apple-system, BlinkMacSystemFont,
     Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
     Helvetica Neue, sans-serif;
-  background-color: #242424;
-  color: #fff;
+  background-color: var(--color-secondary-bg);
+  color: var(--color-primary-text);
   scroll-behavior: smooth;
   scroll-padding-top: 68px;
 }
 
 *::-webkit-scrollbar-track {
-  background-color: #242424;
+  background-color: var(--color-secondary-bg);
 }
 * ::-webkit-scrollbar {
   width: 10px;
-  background-color: #242424;
+  background-color: var(--color-secondary-bg);
 }
 * ::-webkit-scrollbar-thumb {
-  background-color: #000000;
+  background-color: var(--color-primary-bg);
   border-radius: 2px;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+.linkref {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  color: var(--color-secondary-text) !important;
+  font-weight: 300 !important;
 }
 
 * {
@@ -55,11 +87,10 @@ a {
   top: 0;
   left: 0;
   z-index: 50;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px) saturate(180%);
-  -webkit-backdrop-filter: saturate(180%) blur(5px);
-  background-color: rgba(25, 25, 25, 0.75);
-  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 30px var(--color-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: var(--color-tertiary-bg);
 }
 
 .nav_main_container nav {
@@ -73,7 +104,6 @@ a {
   justify-content: space-between;
   padding: 0 25px 0 25px;
   flex-wrap: wrap;
-
   max-width: 920px;
 }
 
@@ -93,7 +123,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #a1a1a1;
+  color: var(--color-secondary-text);
   text-decoration: none;
   padding: 15px;
   font-size: 18px;
@@ -103,16 +133,20 @@ nav ul li a {
   transition: all 0.3s ease;
 }
 .menu_bars {
-  color: #fff;
+  color: var(--color-primary-text);
 }
 
 nav ul li a.active,
 nav ul li a:hover {
-  color: #fff;
+  color: var(--color-primary-text);
+}
+
+.logo {
+  filter: invert(var(--invert));
 }
 
 nav .menu-btn i {
-  color: #fff;
+  color: var(--color-primary-text);
   font-size: 22px;
   cursor: pointer;
   display: none;
@@ -147,25 +181,23 @@ input[type="checkbox"] {
     position: absolute;
     top: 64px;
     right: -55vw;
-    margin: 5px 0;
     width: 50vw;
+    max-width: 50vw;
     padding: 20px;
     height: fit-content;
-    backdrop-filter: blur(5px) saturate(180%);
-    -webkit-backdrop-filter: saturate(180%) blur(5px);
-    background-color: rgba(25, 25, 25, 0.75);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-    height: fit-content;
-    max-width: 50vw;
     text-align: center;
     display: block;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    overflow: hidden;
     margin: 5px;
     overflow: hidden;
+    box-shadow: 0 4px 30px var(--color-shadow);
+    backdrop-filter: blur(10px) ;
+    -webkit-backdrop-filter: blur(10px) ;
+    background-color: var(--color-tertiary-bg);
+    border: 1px solid var(--color-tertiary-text);
   }
+
 
   nav ul li {
     width: 100%;
@@ -175,6 +207,10 @@ input[type="checkbox"] {
 
   .active_menu {
     right: 5px !important;
+  }
+
+  p {
+    font-weight: 300 !important;
   }
 }
 
@@ -186,7 +222,7 @@ input[type="checkbox"] {
 .nav_label {
   width: 40px;
   height: 20px;
-  background-color: #111;
+  background-color: var(--color-primary-bg);
   display: flex;
   border-radius: 50px;
   align-items: center;
@@ -194,14 +230,14 @@ input[type="checkbox"] {
   align-items: center;
   padding: 3px;
   position: relative;
-  border: 1px solid white;
+  border: 1px solid var(--color-primary-text);
   transform: scale(1.5);
 }
 
 .ball {
   width: 16px;
   height: 16px;
-  background-color: white;
+  background-color: var(--color-primary-text);
   position: absolute;
   top: 1px;
   left: 1px;
@@ -214,8 +250,8 @@ input[type="checkbox"] {
   transform: translateX(20px);
 }
 .nav_checkbox:checked + .nav_label .sun_icon svg {
-  transition-duration: 1s;
-  transform: rotate(45deg);
+  transition-duration: 0.5s;
+  transform: rotate(90deg);
 }
 
 .nav_checkbox:checked + .nav_label .sun_icon {
@@ -225,7 +261,7 @@ input[type="checkbox"] {
   opacity: 0;
 }
 .nav_checkbox:checked + .nav_label .moon_icon svg {
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   transform: rotate(0deg);
 }
 
@@ -234,7 +270,7 @@ input[type="checkbox"] {
   transform: rotate(-90deg);
 }
 .moon_icon {
-  color: #fff;
+  color: var(--color-primary-text);
   opacity: 1;
   display: flex;
 }
@@ -242,14 +278,13 @@ input[type="checkbox"] {
 .sun_icon {
   display: flex;
   opacity: 0;
-  color: #fff;
-  transition: all 0.5s ease;
+  color: var(--color-primary-text);
 }
 
 .button {
-  background-color: rgba(255, 252, 252, 0.7);
+  background-color: var(--color-secondary-text);
   border: none;
-  color: #000;
+  color: var(--color-primary-bg);
   font-size: 1rem;
   font-weight: 700;
   border-radius: 7px;
@@ -264,5 +299,5 @@ input[type="checkbox"] {
 }
 
 .button:hover {
-  background-color: rgba(255, 252, 252);
+  background-color: var(--color-primary-text);
 }

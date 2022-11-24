@@ -1,12 +1,22 @@
+.footer:root {
+  --color-primary-bg: #ffffff;
+  --color-secondary-bg: #afafafef;
+}
+
+.footer[data-theme="dark"] {
+  --color-primary-bg: #000;
+  --color-secondary-bg: #242424;
+}
+
 .footer {
   display: flex;
   flex: 1;
   padding: 2rem 0;
-  border-top: 0.2px solid #eaeaea;
+  border-top: 0.2px solid var(--color-secondary-bg);
   justify-content: center;
   align-items: center;
-  background-color: #000;
-  width: 100% ;
+  background-color: var(--color-primary-bg);
+  width: 100%;
 }
 
 .footer a {

@@ -3,6 +3,7 @@
 import React from "react";
 import style from "./../styles/Self.module.css";
 import Socialmedialinks from "./Socialmedialinks";
+import { left } from "./icons";
 
 const Self = () => {
   return (
@@ -24,7 +25,10 @@ const Self = () => {
         </div>
         <div className={style.self_other_info}>
           <button type="button" className="button">
-            <a href="#about">more about me</a>
+            <a href="#about" className="linkref">
+              More about me
+              {React.createElement(left)}
+            </a>
           </button>
         </div>
         <div className={style.social_links}>

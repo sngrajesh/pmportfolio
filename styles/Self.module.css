@@ -1,3 +1,23 @@
+.self_main:root {
+  --color-primary-bg: #ffffff;
+  --color-secondary-bg: #afafafef;
+  --color-tertiary-bg: #e1e1e1bf;
+  --color-primary-text: #000000;
+  --color-secondary-text: #242424;
+  --color-tertiary-text: #00000020;
+  --color-shadow: #ffffff58;
+}
+
+.self_main[data-theme="dark"] {
+  --color-primary-bg: #000;
+  --color-secondary-bg: #242424;
+  --color-tertiary-bg: #191919bf;
+  --color-primary-text: #ffffff;
+  --color-secondary-text: #fffcfcb3;
+  --color-tertiary-text: #ffffff20;
+  --color-shadow: #0000001a;
+}
+
 .self_main {
   width: 100%;
   display: flex;
@@ -12,7 +32,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  color: #fff;
+  color: var(--color-primary-text);
   padding: 3rem;
   z-index: 1;
 }
@@ -38,7 +58,6 @@
   font-size: 1.2rem;
   font-weight: 100;
   letter-spacing: 0.5px;
-  color: rgba(255, 252, 252, 0.7);
 }
 
 .self_image {
@@ -68,7 +87,7 @@
 }
 
 .social_links a {
-  color: rgba(255, 252, 252, 0.7);
+  color: var(--color-secondary-text);
   text-decoration: none;
 }
 
@@ -78,7 +97,7 @@
 }
 
 .social_links a:hover {
-  color: #fff;
+  color: var(--color-primary-text);
 }
 
 @media (max-width: 920px) {
@@ -94,9 +113,11 @@
 
   .self_content h1 {
     font-size: 3rem;
+    text-shadow: 2px 1px 2px var(--color-shadow);
   }
   .self_content h2 {
     font-size: 1.3rem;
+    text-shadow: 2px 1px 2px var(--color-shadow);
   }
   .self_content p {
     font-size: 0.9rem;

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ darkTheme, handleToggle }) => {
   const [showmenu, setShowmenu] = useState(false);
   const router = useRouter();
 
@@ -45,7 +45,16 @@ const Navbar = () => {
           </li>
         </ul>
         <div>
-          <input type="checkbox" className="nav_checkbox" id="nav_checkbox" />
+          {darkTheme !== undefined && (
+            <input
+              type="checkbox"
+              checked={darkTheme}
+              onChange={handleToggle}
+              className="nav_checkbox"
+              id="nav_checkbox"
+            />
+          )}
+
           <label htmlFor="nav_checkbox" className="nav_label">
             <i className="sun_icon">
               <svg
