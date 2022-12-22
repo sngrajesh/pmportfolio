@@ -9,6 +9,7 @@
   --color-tertiary-text: #00000020;
   --color-shadow: #ffffff58;
   --invert: 1;
+  --color-tertiary-bg2: #ececece7;
 }
 
 [data-theme="dark"] {
@@ -20,6 +21,7 @@
   --color-tertiary-text: #ffffff20;
   --color-shadow: #0000001a;
   --invert: 0;
+  --color-tertiary-bg2: #191919f4;
 }
 
 html,
@@ -55,6 +57,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
 }
 
 p {
@@ -192,12 +195,13 @@ input[type="checkbox"] {
     margin: 5px;
     overflow: hidden;
     box-shadow: 0 4px 30px var(--color-shadow);
-    backdrop-filter: blur(10px) ;
-    -webkit-backdrop-filter: blur(10px) ;
-    background-color: var(--color-tertiary-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* background-color: var(--color-tertiary-bg); */
     border: 1px solid var(--color-tertiary-text);
+    background-color: var(--color-tertiary-bg2);
+     
   }
-
 
   nav ul li {
     width: 100%;

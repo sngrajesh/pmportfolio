@@ -15,12 +15,15 @@ const Self = () => {
           </h1>
         </div>
         <div className={style.self_subheading}>
-          <h2> Front-end Designer And Developer</h2>
+          <h2> Project Manager </h2>
         </div>
         <div className={style.self_intropara}>
           <p>
-            A Developer who will help you in your project in the most efficient
-            and fast way possible, turning your idea into reality
+            I am a product management and strategy consultant, focusing currently
+            on helping leaders improve the effectiveness of their organizations
+            through improving practices of strategy deployment and business
+            agility.
+
           </p>
         </div>
         <div className={style.self_other_info}>

@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
@@ -9,6 +10,13 @@ const Navbar = ({ darkTheme, handleToggle }) => {
 
   return (
     <div className="nav_main_container">
+      <Head>
+        {darkTheme ? (
+          <link rel="icon" href="/logo-light.png" />
+        ) : (
+          <link rel="icon" href="/logo-dark.png" />
+        )}
+      </Head>
       <nav>
         <div className="logo">
           <Link href="/">

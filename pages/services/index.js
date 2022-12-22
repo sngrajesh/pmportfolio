@@ -4,13 +4,12 @@ import styles from "./../../styles/Services.module.css";
 import { horse, task, handshake, setting } from "./../../components/icons";
 import Head from "next/head";
 
-
 const info = [
   {
     title: "Advisory",
     icon: handshake,
     value:
-      "Website development. More than a Two years of experience building web interfaces means that I'm happy to deliver  anything from single-page apps to scaleable design systems. I can help you identify the most appropriate technology for your project and, whilst I love a good framework, you can be sure  that I will never use tech for tech's sake.",
+      "I will help in the project planning department duties include performing business process analysis, ensuring that the engineering team delivers within the defined scope and timelines, and training team members on delivering high-quality solutions. Lead professional services engagements from assessment analysis to completion by partnering directly   to enhance   efficiency.  Develop processes to address and improve infrastructure and application availability. ",
   },
   {
     title: "Development",
@@ -22,13 +21,13 @@ const info = [
     title: "Planning",
     icon: task,
     value:
-      "Your website is always growing. Whether you’re adding new features or making improvements I’m here to help. I won’t leave you guessing how your own website works and will always be available to answer any questions you might have.",
+      "I can help you identify the most appropriate technology for your project and, whilst I love a good framework, you can be sure that I will never use tech for tech's sake. I can help you identify the most appropriate technology for your project and, whilst I love a good framework, you can be sure that I will never use tech for tech's sake",
   },
   {
     title: "Strategy",
     icon: horse,
     value:
-      "Your website is always growing. Whether you’re adding new features or making improvements I’m here to help. I won’t leave you guessing how your own website works and will always be available to answer any questions you might have.",
+      "Your website is always growing. Whether you’re adding new features or making improvements I’m here to help. I won’t leave you guessing how your own website works and will always be available to answer any questions you might have. ",
   },
 ];
 
@@ -36,11 +35,11 @@ const Services = () => {
   return (
     <>
       <div className={styles.services_main_container}>
-      <Head>
-        <title>Services</title>
-        <meta name="description" content="Services page Rajesh Singh" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+        <Head>
+          <title>Services</title>
+          <meta name="description" content="Services page Rajesh Singh" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
         <h1>I provide a wide range of creative services</h1>
 
         {info.map((item, index) => {

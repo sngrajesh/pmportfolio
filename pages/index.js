@@ -15,7 +15,7 @@ export default function Home() {
           name="description"
           content="Are you looking for a developer to upscale your business."
         />
-        <link rel="icon" href="/favicon.ico" />
+       
       </Head>
 
       <main className={styles.main}>
